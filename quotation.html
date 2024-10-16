@@ -1,117 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quotation Document</title>
-    <link rel="stylesheet" href="quotation_styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="quotation_styles.css" />
+  </head>
+  <body>
     <div class="a4-page">
-        <!-- Header Section with Logo and Company Info -->
-        <div class="header">
-            
-            <div class="company-info-container">
-                <span class = vl> </span>
-                <div class="company-info">
-                <p>BY: AFFILIATED ELECTRONICS SERVICE CROP</p>
-                <p>VAT REG. TIN: 000-050-365-000</p>
-                <p>#18 EVANGILISTA ST., SANTOLAN, PASIG CITY </p>
-                </div>
-                <!-- BY: Affiliated Electronics Service Corp
+      <!-- Header Section with Logo and Company Info -->
+      <div class="header">
+        <div class="company-info-container">
+          <span class="vl"> </span>
+          <div class="company-info">
+            <p>BY: AFFILIATED ELECTRONICS SERVICE CROP</p>
+            <p>VAT REG. TIN: 000-050-365-000</p>
+            <p>#18 EVANGILISTA ST., SANTOLAN, PASIG CITY</p>
+          </div>
+          <!-- BY: Affiliated Electronics Service Corp
 VAT REG. TIN: 000-050-365-000
 #18 Evanglista St., Santolan, Pasig City -->
-            </div>
-            <div class="logo">
-                <img src="Aserco logo.png" alt="Company Logo" width="150px">
-            </div>
         </div>
-        
-        <!-- Quotation Information -->
-        <div class="quotation-container">
-            <div class="info-container">
-                <div class="quotation-filter">
-                    <p><strong>Order Number: </strong></p>
-                    <p><strong>Date: </strong></p>
-                    <p><strong>Attention: </strong></p>
-                    <p><strong>Company: </strong></p>
-                    <p><strong>Address: </strong></p>
-                    
-                </div>
-                <div class="quotation-info">
-                    <p> QUO-2024-001</p>
-                    <p> October 15, 2024</p>
-                    <p> Dencel Dela Cru</p>
-                </div>
-            </div>
-            <span class="vl2"></span> <!-- Corrected the class declaration here -->
-            <div class="info-container">
-                <div class="quotation-filter">
-                    <p><strong>Project Title: </strong></p>
-                    <p><strong>Location: </strong></p>
-                    <p> <strong>Branch</strong></p>
-                </div>
-                <div class="quotation-info">
-                    <p> INSTALLATION OF ACUs AT PAMANA WATER CORPORATION</p>
-                    <p> VARIOUS LOCATION</p>
-                    <p> ABE MASINAG</p>
-                </div>
-            </div>
+        <div class="logo">
+          <img src="Aserco logo.png" alt="Company Logo" width="150px" />
         </div>
-        
+      </div>
 
-        <!-- Quotation Table -->
-        <div class="quotation-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Product/Service 1</td>
-                        <td>5</td>
-                        <td>$100.00</td>
-                        <td>$500.00</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Product/Service 2</td>
-                        <td>3</td>
-                        <td>$200.00</td>
-                        <td>$600.00</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                    <tr class="total">
-                        <td colspan="4"><strong>Grand Total</strong></td>
-                        <td><strong>$1100.00</strong></td>
-                    </tr>
-                </tbody>
-            </table>
+      <!-- Quotation Information -->
+      <div class="quotation-container">
+        <div class="info-container">
+          <div class="quotation-filter">
+            <p><strong>Odoo No.: </strong></p>
+            <p><strong>Date: </strong></p>
+            <p><strong>Attention: </strong></p>
+            <p><strong>Company: </strong></p>
+            <p><strong>Address: </strong></p>
+          </div>
+          <div class="quotation-info">
+            <p>--</p>
+            <p>October 15, 2024</p>
+            <p>Dencel Dela Cru</p>
+            <p>PAMANA WATER CORPORATION</p>
+            <p>PAGADIAN CITY</p>
+          </div>
         </div>
-        <hr>
-        <!-- Terms & Conditions Section -->
-        <div class="terms">
-            <h3>Terms and Conditions</h3>
-            <p>
-                Payment is due within 30 days of receiving the quotation. Prices are subject to change based on market conditions. 
-                This quotation is valid for 60 days from the date of issuance.
-            </p>
+        <span class="vl2"></span>
+        <!-- Corrected the class declaration here -->
+        <div class="info-container">
+          <div class="quotation-filter">
+            <p><strong>Project Title: </strong></p>
+            <p><strong>Location: </strong></p>
+            <p><strong>Branch</strong></p>
+          </div>
+          <div class="quotation-info">
+            <p>INSTALLATION OF ACUs AT PAMANA WATER CORPORATION</p>
+            <p>VARIOUS LOCATION</p>
+            <p>ABE MASINAG</p>
+          </div>
         </div>
+      </div>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <p>Thank you for your business!</p>
-            <p>Company Name | www.companywebsite.com</p>
-        </div>
+      <!-- Quotation Table -->
+      <div class="quotation-table">
+        <h3 class = "title">
+          Dear Ma’am/Sir: 
+        </h3>
+        <p> We are pleased to present you our best offer for your
+          consideration and approval, subject to the terms and conditions contained herein:
+        </p>
+        <span> </span>
+        <table>
+            <colgroup>
+                <col style="width: 5%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+                <col style="width: 5%;">
+                <col style="width: 5%;">
+                <col style="width: 12%;">
+                <col style="width: 15%;"> <!-- Unit Cost -->
+                <col style="width: 15%;"> <!-- Total Cost -->
+              </colgroup>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Location</th>
+              <th>Description</th>
+              <th>Qty.</th>
+              <th>Unit of Measurment</th>
+              <th>SRP</th>
+              <th>Unit Cost</th>
+              <th>Total Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ACCOUNTING & FINANCE, ADMINISTRATIVE & HR, ENGINEERING & OPERATION</td>
+              <td>Installation of 1.0hp Wall Mounted Unit 1st 10ft</td>
+              <td>1</td>
+              <td>Unit</td>
+              <td>₱8,000.00</td>
+              <td>Free Installation</td>
+              <td>Free Installation</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ACCOUNTING & FINANCE, ADMINISTRATIVE & HR, ENGINEERING & OPERATION</td>
+                <td>Installation of 1.0hp Wall Mounted Unit 1st 10ft</td>
+                <td>1</td>
+                <td>Unit</td>
+                <td>₱8,000.00</td>
+                <td>Free Installation</td>
+                <td>Free Installation</td>
+              </tr>
+            <!-- Add more rows as needed -->
+            <tr class="total">
+                <td colspan="7"><strong>Total:</strong></td>
+                <td><strong>₱123,350.00</strong></td>
+              </tr>
+            <tr class="discounted">
+                <td colspan="7"><strong>Discounted:</strong></td>
+                <td><strong>₱3000.00</strong></td>
+            </tr>
+            <tr class="grand-total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-label"><strong>Grand Total</strong></td>
+                <td class="total-amount"><strong>₱120,350.00</strong></td>
+              </tr>
+              
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <!-- Terms & Conditions Section -->
+      <div class="terms">
+        <h3>Terms and Conditions</h3>
+        <p>
+          Payment is due within 30 days of receiving the quotation. Prices are
+          subject to change based on market conditions. This quotation is valid
+          for 60 days from the date of issuance.
+        </p>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer">
+        <p>Thank you for your business!</p>
+        <p>Company Name | www.companywebsite.com</p>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
