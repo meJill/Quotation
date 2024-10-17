@@ -5,6 +5,28 @@
   src: url(Poppins-Regular.ttf);
 }
 
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.a4-page {
+  width: auto;
+  height: auto;
+  min-width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  overflow: visible; /* Ensures content goes beyond */
+}
+
+@media print {
+  .a4-page {
+    width: auto; /* Allow content to flow beyond set A4 dimensions */
+    height: auto;
+    overflow: visible;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,22 +36,13 @@
 
 /* Set A4 size */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins;
   display: flex;
   justify-content: center;
   padding: 20px;
   background-color: #f0f0f0;
 }
 
-.a4-page {
-  width: 210mm; /* A4 width */
-  height: 297mm; /* A4 height */
-  background-color: white;
-  padding: 20mm;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
-  position: relative;
-}
 
 .vl {
   height: 46px;
@@ -63,7 +76,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20mm; /* No gap between flex items */
+  gap: 10%; /* No gap between flex items */
   margin-bottom: 10mm;
   font-size: 8px;
 }
@@ -107,7 +120,7 @@ body {
 .quotation-table table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20mm;
+  margin-bottom: 10mm;
   font-size: 8px;
   
 }
@@ -176,8 +189,38 @@ body {
  
   }
   
+.linebreak {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
 
-  
+.linebreak::before,
+.linebreak::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px dashed #ADADAD; /* Line color */
+}
+
+.linebreak::before {
+  margin-right: 10px;
+}
+
+.linebreak::after {
+  margin-left: 10px;
+}
+
+.end-text {
+  font-size: 8px;
+  color: #ADADAD;
+}
+
+.terms {
+  margin-bottom: 20mm;
+  font-size: 8px;
+}
 .terms {
   margin-bottom: 20mm;
 }
@@ -185,24 +228,57 @@ body {
 .terms h3 {
   margin-bottom: 10px;
 }
+.terms table {
+  width: 80%;
+  margin-bottom: 10mm;
+  font-size: 8px;
+  border-collapse: separate; /* Use 'separate' to allow rounding */
+  border-spacing: 0; /* Remove space between borders */
+  border: 1px solid #CCCCCC;
+  border-radius: 8px 8px 0px 0px; /* Apply rounding to the whole table */
+}
+
+.terms th {
+  background-color: #CCCCCC;
+  color: black;
+  font-weight: bold;
+  padding: 4px 8px;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+}
+
+.terms th:first-child {
+  border-top-left-radius: 8px; /* Round top-left corner */
+
+}
+
+.terms th:last-child {
+  border-top-right-radius: 8px; /* Round top-right corner */
+}
+
+.terms td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+}
+.terms td:first-child {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+  font-weight: bold;
+}
+
+.terms td ul {
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.terms td ul li {
+  margin-bottom: 3px;
+}
+
 
 .footer {
-  text-align: center;
-  position: absolute;
-  bottom: 20mm;
-  width: calc(100% - 40mm); /* Width minus padding */
+
 }
 
-@media print {
-  body {
-    background: none;
-    box-shadow: none;
-  }
-
-  .a4-page {
-    border: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
-}
