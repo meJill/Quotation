@@ -1,5 +1,3 @@
-/* Reset margins and padding */
-
 @font-face {
   font-family: Poppins;
   src: url(Poppins-Regular.ttf);
@@ -11,19 +9,24 @@
 }
 
 .a4-page {
-  width: auto;
-  height: auto;
-  min-width: 210mm;
-  min-height: 297mm;
+  width: 210mm; /* Fixed width for A4 */
+  min-height: 297mm; /* Minimum A4 height */
   padding: 20mm;
-  overflow: visible; /* Ensures content goes beyond */
+  overflow: visible; /* Content can overflow to adjust height */
+  background-color: white;
 }
 
 @media print {
   .a4-page {
-    width: auto; /* Allow content to flow beyond set A4 dimensions */
-    height: auto;
-    overflow: visible;
+    width: 210mm;
+    min-height: auto; /* Let the height adjust based on content */
+    height: auto; /* Allow dynamic height for print */
+    margin: 0;
+    page-break-after: always; /* Ensure content breaks to the next page */
+  }
+  
+  .a4-page:last-child {
+    page-break-after: auto; /* Prevent an extra blank page at the end */
   }
 }
 
@@ -31,18 +34,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
 }
 
 /* Set A4 size */
 body {
-  font-family: Poppins;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
   background-color: #f0f0f0;
 }
-
 
 .vl {
   height: 46px;
@@ -59,6 +60,13 @@ body {
   font-size: x-small;
   font-weight: 50;
 }
+
+.sqwiggle img{
+  width: 10px;
+  height: 10%;
+}
+
+
 
 .company-info-container {
   display: flex;
@@ -122,18 +130,20 @@ body {
   border-collapse: collapse;
   margin-bottom: 10mm;
   font-size: 8px;
+  border: none;
   
 }
 
 .quotation-table th {
   background-color: #0065B2; /* Header color */
   color: white; /* Text color for contrast */
-  border: 0px solid #ccc;
   padding: 8px 10px; /* Adequate padding for spacing */
   text-align: center; 
   font-weight: lighter;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1); /* Softer shadow */
   justify-content: space-around;
+  
+  
 }
 
 .quotation-table th:first-child {
@@ -147,9 +157,19 @@ body {
 }
 
 .quotation-table td {
-  border: 0px solid #ccc;
   padding: 12px 10px; /* Reduced padding for a more compact look */
   text-align: center;
+
+}
+
+/* .quotation-table tr{
+  background-color: #f0f0f0;
+  border: white solid;
+} */
+
+.row-1{
+  background-color: #fdfdfd;
+  border: white solid;
 }
 
 /* Specific class for 'Grand Total' row */
@@ -314,9 +334,9 @@ body {
 .signature-section-container{
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
-  gap: 15%;
+  justify-content:left;
   margin-top: 10mm;
+  gap: 80px;
   padding: 10px;
 }
 
@@ -334,8 +354,8 @@ body {
 
 .signature-space-conforme{
   border: 1px solid #CCCCCC;
-  padding: 10px 10px 0px 20px;
-  width: 45%;
+  padding: 10px 0px 10px 10px;
+  width: 50%;
   margin-top: -12px;
   border-radius: 8px;
 }
@@ -364,7 +384,7 @@ body {
 .conforme input{
   border: none;
   border-bottom: 1px solid; 
-  background-color: #f0f0f0;
+  background-color: white;
   padding: 1mm;
   height: 2mm;
 }
