@@ -61,10 +61,20 @@ body {
   font-weight: 50;
 }
 
-.sqwiggle img{
-  width: 10px;
-  height: 10%;
+.wave-icon {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: end;
 }
+
+.wave-icon img {
+  width: 100%;
+  max-width: 300px;
+  position: absolute;
+  z-index: 2;
+}
+
 
 
 
